@@ -1,4 +1,6 @@
-package collateralsystem.domainobjects;
+package collateralsystem.domainobjects.trading;
+
+import collateralsystem.domainobjects.RiskFactor;
 
 public class Trade {
     private RiskFactor[] riskFactors;
