@@ -1,8 +1,7 @@
-package collateralsystem.services;
+package collateralsystem.actors;
 
 import collateralsystem.components.DataIngestion;
 import collateralsystem.components.FileUpload;
-import collateralsystem.domainobjects.Party;
 
 import java.util.HashMap;
 import java.util.Map;

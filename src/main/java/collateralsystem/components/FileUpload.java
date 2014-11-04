@@ -1,7 +1,7 @@
 package collateralsystem.components;
 
 import collateralsystem.domainobjects.CreditSupportAnnex;
-import collateralsystem.domainobjects.Party;
+import collateralsystem.actors.Party;
 import collateralsystem.domainobjects.trading.Trade;
 
 public class FileUpload {

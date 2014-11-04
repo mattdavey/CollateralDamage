@@ -1,11 +1,13 @@
-package collateralsystem;
+import collateralsystem.actors.Party;
+import collateralsystem.actors.CollateralCloud;
 
-import collateralsystem.domainobjects.Party;
-import collateralsystem.services.CollateralCloud;
+public class TestProgram {
 
-public class TestRunner {
     public static void main(String[] args) {
+        new TestProgram().run();
+    }
 
+    private void run() {
         final Party partyA = new Party("A");
         final Party partyB = new Party("B");
 

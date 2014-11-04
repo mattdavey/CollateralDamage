@@ -1,5 +1,6 @@
-package collateralsystem.domainobjects;
+package collateralsystem.actors;
 
+import collateralsystem.domainobjects.CreditSupportAnnex;
 import collateralsystem.domainobjects.trading.Trade;
 
 public class Party {
