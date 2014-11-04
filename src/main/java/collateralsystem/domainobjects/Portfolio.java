@@ -1,5 +1,4 @@
 package collateralsystem.domainobjects;
 
-
-public class RiskFactors {
+public class Portfolio {
 }

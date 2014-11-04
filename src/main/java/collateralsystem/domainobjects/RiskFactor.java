@@ -1,4 +1,5 @@
 package collateralsystem.domainobjects;
 
-public class CreditSupportAnnex {
+
+public class RiskFactor {
 }
