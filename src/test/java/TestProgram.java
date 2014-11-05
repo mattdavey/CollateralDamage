@@ -12,7 +12,10 @@ public class TestProgram {
         final Party partyB = new Party("B");
 
         final CollateralCloud cloud = new CollateralCloud();
-        cloud.getFileUploader(partyA).upload(partyA.getCSA());
-        cloud.getFileUploader(partyA).upload(partyA.getTrades());
+        cloud.addCSA(partyA, partyA.getCSA());
+        cloud.addCollateralHoldings(partyA, partyA.getCollateralHoldings());
+        cloud.addTrades(partyA, partyA.getTrades());
+        cloud.addRiskFactors(partyA, partyA.getRiskFactors());
+
     }
 }

@@ -1,8 +1,10 @@
 package collateralsystem.components;
 
 
+import collateralsystem.domainobjects.CollateralHolding;
 import collateralsystem.domainobjects.CreditSupportAnnex;
 import collateralsystem.actors.Party;
+import collateralsystem.domainobjects.RiskFactor;
 import collateralsystem.domainobjects.trading.Trade;
 import collateralsystem.domainobjects.TradeBucket;
 
@@ -13,7 +15,7 @@ public class DataIngestion {
     private final TriOptima triOptima = new TriOptima();
     private final Map<Party, CreditSupportAnnex> csaMap = new HashMap<Party, CreditSupportAnnex>();
 
-    public void newTrades(final Trade[] trades) {
+    public void addTrades(final Party party, final Trade[] trades) {
         triOptima.send(trades);
 
         bucketTradesbyCSA(trades).splitBucketsByTerms();
@@ -23,7 +25,15 @@ public class DataIngestion {
         return new TradeBucket(trades);
     }
 
-    public void newCSA(final CreditSupportAnnex csa, final Party party) {
+    public void addCSA(final Party party, final CreditSupportAnnex csa) {
         csaMap.put(party, csa);
+    }
+
+    public void addRiskFactors(final Party party, final RiskFactor[] riskFactors) {
+
+    }
+
+    public void addCollateralHoldings(final Party party, final CollateralHolding[] collateralHoldings) {
+
     }
 }

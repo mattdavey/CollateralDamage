@@ -4,7 +4,7 @@ Feature: Load a CSA into the cloud
 
 @focus
   Scenario: As a party I want to load a CSA into the cloud So that I am ready to upload trades
-    Given the following actors exist and are connected as follows
+    Given the following actors exist and are connected to the CollateralCloud
     | Actor        | Name  |
     | Party        | A     |
     | Party        | B     |

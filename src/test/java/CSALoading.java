@@ -35,7 +35,7 @@ public class CSALoading {
 
     private final HashMap<String, Object> actors = new HashMap<String, Object>();
 
-    @Given("^the following actors exist and are connected as follows$")
+    @Given("^the following actors exist and are connected to the CollateralCloud$")
     public void the_following_actors(final DataTable data) throws Throwable {
         final List<SystemActors> rows = data.asList(SystemActors.class);
 
@@ -54,7 +54,7 @@ public class CSALoading {
             final Object actor = actors.get(actions.actor);
 
             if (actions.parameter.length() != 0) {
-                final Method method = actor.getClass().getMethod(actions.message, new Class[] {String.class});
+                final Method method = actor.getClass().getMethod("get"+actions.message);
                 method.invoke(actor, actions.parameter);
             } else {
                 final Method method = actor.getClass().getMethod(actions.message);
